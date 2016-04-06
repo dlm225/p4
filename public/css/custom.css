@@ -27,36 +27,6 @@ footer {
 }
 /* End Sticky Footer */
 
-
-section, header, nav {
-    padding-left:25px;
-    padding-top:25px;
-}
-
-nav ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-
-nav ul li {
-    display:inline;
-    background-color:#eee;
-    padding:5px;
-    margin-right:5px;
-}
-
-.backgray {
-    background-color: lightgray;
-    border-radius: 10%;
-    padding: 20px;
-    width: 48%;
-}
-
-.center {
-    text-align:center;
-}
-
 .center form {
     display:inline-block;
 }
@@ -105,46 +75,6 @@ input[type=text],input[type=password],select {
     height: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.profiletextdiv {
-    width: 300px;
-    float: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.profilepic {
-    height: 200px;
-    border-radius: 10%;
-    float: right;
-}
-
-.profilepicdiv {
-    width: 300px;
-    float: right;
-    overflow: auto;
-}
-
-.profiletextdiv2 {
-    width: 200px;
-    float: left;
-    padding: 10px;
-    overflow: visible;
-    text-overflow: ellipsis;
-}
-
-.profilepic2 {
-    height: 150px;
-    border-radius: 8%;
-    float: right;
-}
-
-.profilepicdiv2 {
-    width: 230px;
-    padding: 20px;
-    float: right;
-    overflow: visible;
 }
 
 /*----------------------------------------------------
