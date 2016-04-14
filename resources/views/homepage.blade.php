@@ -11,12 +11,12 @@
 @section('content')
     <div class="container">
         <div class="text-center">
-            <br /><br /><br />
+            <br /><br />
             <span class="glyphicon glyphicon-flag whitetext" style="font-size:200px;" aria-hidden="true"></span>
             <h1 class="whitetext">Another CTF</h1>
             <h4 class="whitetext">A Capture-the-Flag Training Venue</h4>
 
-            <a class="joinbutton" id="modal_trigger" href="#modal">Join the fun!</a>
+            <a class="joinbutton" id="modal_trigger" href="#modal">REGISTER or LOGIN</a>
 
             <div id="modal" class="popupContainer" style="display:none;">
         		<header class="popupHeader">
@@ -62,8 +62,7 @@
         					<br />
 
         					<div class="checkbox">
-        						<input id="remember" type="checkbox" />
-        						<label for="remember">Remember me on this computer</label>
+        						<label for="remember"><input id="remember" type="checkbox" /> Remember me on this computer</label>
         					</div>
 
         					<div class="action_btns">
@@ -78,7 +77,7 @@
         			<!-- Register Form -->
         			<div class="user_register">
         				<form>
-        					<label>Full Name</label>
+        					<label>Username</label>
         					<input type="text" />
         					<br />
 
@@ -91,8 +90,7 @@
         					<br />
 
         					<div class="checkbox">
-        						<input id="send_updates" type="checkbox" />
-        						<label for="send_updates">Send me occasional email updates</label>
+        						<label for="send_updates"><input id="send_updates" type="checkbox" /> Send me occasional email updates</label>
         					</div>
 
         					<div class="action_btns">
@@ -111,7 +109,7 @@
     <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
     <script type="text/javascript">
-        $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+        $("#modal_trigger").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });
 
         $(function () {
             // Calling Login Form

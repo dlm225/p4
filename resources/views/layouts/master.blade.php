@@ -57,7 +57,7 @@
                                     </li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="/">Log-In</a></li>
+                                    <li><a href="/#modal" id="modal_trigger2">Log-In</a></li>
                                 </ul>
                             </div>
                         </div>
