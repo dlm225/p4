@@ -12,8 +12,11 @@ Route::group(['middleware' => ['web']], function () {
     |
     */
 
-    Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@getIndex');
     Route::get('/login', 'LoginController@login');
     Route::get('/join', 'ProfileController@join');
+    Route::get('/about', 'HomeController@getAbout');
+    Route::get('/leaderboard', 'MoreController@getLeaderboard');
 
+    Route::get('/profile', 'ProfileController@getProfile');
 });

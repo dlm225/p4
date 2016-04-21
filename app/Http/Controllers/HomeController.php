@@ -9,7 +9,14 @@ class HomeController extends Controller {
     /**
     * Responds to requests to GET /
     */
-    public function index() {
+    public function getIndex() {
         return view('homepage');
+    }
+
+    /**
+    * Responds to requests to GET /about
+    */
+    public function getAbout() {
+        return view('about');
     }
 }

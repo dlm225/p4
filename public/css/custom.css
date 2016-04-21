@@ -26,8 +26,36 @@ footer {
 }
 /* End Sticky Footer */
 
+.title-text {
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.leader-text {
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.leader-pic {
+    padding: 4px;
+
+}
+
 .center form {
     display:inline-block;
+}
+
+.centerbox {
+    text-align: center;
+    padding: 20px;
+}
+
+.shadowbox {
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    text-align: left;
 }
 
 .joinbutton {
@@ -105,14 +133,14 @@ input[type=text],input[type=password],select {
 }
 
 .fancyboxsilver {
-    border-radius: 20%;
+    border-radius: 5px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
-    padding:20px;
-    background-color: silver;
+    padding:10px;
+    background-color: darkgray;
     margin: auto;
-    height: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    height: auto;
+    width: 60%;
+    min-width: 250px;
 }
 
 /*----------------------------------------------------
@@ -127,4 +155,28 @@ Flash message
     left:0;
     background-color:yellow;
     font-weight:bold;
+}
+
+/*-----------------------------------------------------
+Profile page
+------------------------------------------------------*/
+.profile_image {
+    text-align: center;
+}
+
+.profile_info {
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    width: 60%;
+    height: auto;
+}
+
+.pass-btn {
+    color: black;
+    border-radius: 3px;
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
