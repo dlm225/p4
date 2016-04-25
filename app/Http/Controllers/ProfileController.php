@@ -7,7 +7,7 @@ use p4\Http\Controllers\Controller;
 class ProfileController extends Controller {
 
     /**
-    * Responds to requests to GET /join
+    * Responds to requests to GET /join from the SignUp popup
     */
     public function join() {
         return view('profile.join');

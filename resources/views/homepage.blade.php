@@ -41,7 +41,7 @@
         				</div>
 
         				<div class="centeredText">
-        					<span>Or use your Email address</span>
+        					<span>Or use your Username/Email</span>
         				</div>
 
         				<div class="action_btns">
@@ -76,7 +76,7 @@
 
         			<!-- Register Form -->
         			<div class="user_register">
-        				<form>
+        				<form action="/join" method="post">
         					<label>Username</label>
         					<input type="text" />
         					<br />
@@ -95,7 +95,7 @@
 
         					<div class="action_btns">
         						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-        						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+        						<div class="one_half last"><input type="submit" class="btn btn_red">Register</input></div>
         					</div>
         				</form>
         			</div>

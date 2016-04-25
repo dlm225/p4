@@ -55,7 +55,13 @@
                                     </li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="/#modal" id="modal_trigger2">Log-In</a></li>
+                                    {{--<li><a href="/#modal" id="modal_trigger2">Log-In</a></li>--}}
+                                    {{ $user = Auth::user() }}
+                                    @if($user)
+                                        <li>{{ $user->username }} | Pts: {{ $user->points }}
+                                    @else
+                                        <li><a href="/login">Log-In</a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
