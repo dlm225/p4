@@ -1,5 +1,6 @@
 <?php
 
+use p4\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

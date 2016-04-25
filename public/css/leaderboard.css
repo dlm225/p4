@@ -1,0 +1,23 @@
+.leader-rank {
+    padding:20px;
+}
+
+.leader-profile_image {
+    padding:5px;
+}
+
+.leader-username {
+    padding:5px;
+    display: inline-block;
+    width:150px;
+}
+
+.leader-points {
+    padding:20px;
+    display: inline-block;
+    width:150px;
+}
+
+.leader-last_login {
+    padding:20px;
+}

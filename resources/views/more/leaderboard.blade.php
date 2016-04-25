@@ -4,6 +4,10 @@
     Leaderboard - Another CTF
 @stop
 
+@section('head')
+    <link href="/css/leaderboard.css" rel='stylesheet'>
+@stop
+
 @section('content')
     <div class='container leader-container'>
         <div class='row'>
@@ -13,24 +17,16 @@
                 <img src='/images/trophy.png' width='75px' height='75px'>
             </div>
         </div>
-        <div class='row'>
-            <div class='col-md-8 col-md-offset-2 shadowbox'>
-                <span class='leader-text'> 1 </span>
-                <img class='leader-pic' src='/images/defaultprofile.png' width='50px' height='50px'>
-                <span class='leader-text'> Username 1</span>
-                <span class='leader-text'> Points: 2342342</span>
-                <span class='leader-text'> Last Login: 42 days ago</span>
+        @foreach($leaders as $leader)
+            <div class='row'>
+                <div class='col-md-8 col-md-offset-2 shadowbox'>
+                    <span class='leader-rank'> 1 </span>
+                    <img class='leader-profile_image' src=' {{ $leader->profile_image }} ' width='50px' height='50px'>
+                    <span class='leader-username'> {{ $leader->username }} </span>
+                    <span class='leader-points'> {{ $leader->points }} </span>
+                    <span class='leader-last_login'> Last Login: {{ $leader->last_login }} </span>
+                </div>
             </div>
-        </div>
-        <br />
-        <div class='row'>
-            <div class='col-md-8 col-md-offset-2 shadowbox'>
-                <span class='leader-text'> 2 </span>
-                <img class='leader-pic' src='/images/defaultprofile.png' width='50px' height='50px'>
-                <span class='leader-text'> Username 2</span>
-                <span class='leader-text'> Points: 2342342</span>
-                <span class='leader-text'> Last Login: 3 days ago</span>
-            </div>
-        </div>
+        @endforeach
     </div>
 @stop

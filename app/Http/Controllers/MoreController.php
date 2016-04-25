@@ -10,7 +10,8 @@ class MoreController extends Controller {
     * Responds to requests to GET /leaderboard
     */
     public function getLeaderboard() {
-        return view('more.leaderboard');
+        $leaders = \p4\User::orderBy('points','desc')->get();
+        return view('more.leaderboard')->with('leaders',$leaders);
     }
 
 }
