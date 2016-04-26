@@ -96,6 +96,10 @@ footer {
     color: white;
 }
 
+.navbar-user {
+    line-height: 50px;
+    text-align: center;
+}
 /*----------------------------------------------------
 Forms
 -----------------------------------------------------*/
@@ -179,4 +183,4 @@ Profile page
     position: absolute;
     right: 0;
     bottom: 0;
-}
+}ß

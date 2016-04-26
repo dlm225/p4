@@ -13,17 +13,24 @@ Route::group(['middleware' => ['web']], function () {
     */
 
     Route::get('/', 'HomeController@getIndex');
-//    Route::get('/login', 'LoginController@login');
     Route::post('/join', 'ProfileController@join');
     Route::get('/about', 'HomeController@about');
     Route::get('/leaderboard', 'MoreController@getLeaderboard');
     Route::get('/profile', 'ProfileController@getProfile');
     Route::get('/home', 'HomeController@home');
 
+    # Show login form
     Route::get('/login', 'Auth\AuthController@getLogin');
-    Route::post('/login', 'Auth\AuthController@postLogin');
-    Route::get('/logout', 'Auth\AuthController@logout');
-    Route::get('/register', 'Auth\AuthController@getRegister');
-    Route::post('/register', 'Auth\AuthController@postRegister');
 
+    # Process login form
+    Route::post('/login', 'Auth\AuthController@postLogin');
+
+    # Process logout
+    Route::get('/logout', 'Auth\AuthController@logout');
+
+    # Show registration form
+    Route::get('/register', 'Auth\AuthController@getRegister');
+
+    # Process registration form
+    Route::post('/register', 'Auth\AuthController@postRegister');
 });

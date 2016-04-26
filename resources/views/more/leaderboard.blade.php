@@ -20,7 +20,6 @@
         @foreach($leaders as $leader)
             <div class='row'>
                 <div class='col-md-8 col-md-offset-2 shadowbox'>
-                    <span class='leader-rank'> 1 </span>
                     <img class='leader-profile_image' src=' {{ $leader->profile_image }} ' width='50px' height='50px'>
                     <span class='leader-username'> {{ $leader->username }} </span>
                     <span class='leader-points'> {{ $leader->points }} </span>

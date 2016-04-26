@@ -24,8 +24,11 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
 
+    # Overrides Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers
+    protected $username = 'username';
+
     # Where should the user be redirected to if their login fails?
-    protected $loginPath = '/';
+    protected $loginPath = '/login';
 
     # Where should the user be redirected to after logging out?
     protected $redirectAfterLogout = '/';

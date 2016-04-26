@@ -16,6 +16,10 @@
             <h1 class="whitetext">Another CTF</h1>
             <h4 class="whitetext">A Capture-the-Flag Training Venue</h4>
 
+            @if(Auth::user())
+                <br /><br />
+                <a class="joinbutton" href="/home">GO TO YOUR LANDING PAGE</a>
+            @else
             <a class="joinbutton" id="modal_trigger" href="#modal">REGISTER or LOGIN</a>
 
             <div id="modal" class="popupContainer" style="display:none;">
@@ -101,6 +105,7 @@
         			</div>
         		</section>
     	    </div>
+            @endif
         </div>
     </div>
 @stop
