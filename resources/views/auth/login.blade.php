@@ -20,14 +20,8 @@
 
         <div class='form-group'>
             <label for='username'>Username</label>
-            <input type='text' name='username' id='username' value='{{ old('username') }}'>
+            <input type='text' name='username' id='username' value='{{ old('username')}} '>
         </div>
-
-{{--        <div class='form-group'>
-            <label for='email'>Email</label>
-            <input type='text' name='email' id='email' value='{{ old('email') }}'>
-        </div>
---}}
 
         <div class='form-group'>
             <label for='password'>Password</label>

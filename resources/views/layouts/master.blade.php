@@ -44,7 +44,10 @@
                                     <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
                                     <li><a href="/about">About</a></li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            More
+                                            <span class="caret"></span>
+                                        </a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="/leaderboard">Leaderboard</a></li>
                                             <li><a href="#">Another action</a></li>
@@ -53,16 +56,23 @@
                                             <li><a href="#">Links to Study Sites</a></li>
                                         </ul>
                                     </li>
-                                </ul>
                                 @if(Auth::user())
-                                    <ul class="nav navbar-nav navbar-text">
-                                        {{ Auth::user()->username }} -- Pts: {{ Auth::user()->points }}
-                                    </ul>
+                                    <li class="dropdown">
+                                        <a href="#" class"dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false>">
+                                            {{ Auth::user()->username }} -- Pts: {{ Auth::user()->points }}
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="/profile">Profile</a></li>
+                                            <li><a href="/history">History</a></li>
+                                        </ul>
+                                    </li>
                                 @endif
+                                </ul>
                                 <ul class="nav navbar-right">
                                     {{--<li><a href="/#modal" id="modal_trigger2">Log-In</a></li>--}}
                                     @if(Auth::user())
-                                        <li><a href="/logout">Logout</a>
+                                        <li><a href="/logout">Logout</a></li>
                                     @else
                                         <li><a href="/login">Login</a></li>
                                     @endif

@@ -18,7 +18,7 @@
 
             @if(Auth::user())
                 <br /><br />
-                <a class="joinbutton" href="/home">GO TO YOUR LANDING PAGE</a>
+                <a class="joinbutton" href="/home">GO TO YOUR HOMEPAGE</a>
             @else
             <a class="joinbutton" id="modal_trigger" href="#modal">REGISTER or LOGIN</a>
 
