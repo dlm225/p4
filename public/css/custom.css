@@ -41,7 +41,6 @@ footer {
 
 .leader-pic {
     padding: 4px;
-
 }
 
 .center form {
@@ -155,27 +154,3 @@ Flash message
     background-color:yellow;
     font-weight:bold;
 }
-
-/*-----------------------------------------------------
-Profile page
-------------------------------------------------------*/
-.profile_image {
-    text-align: center;
-}
-
-.profile_info {
-    padding: 10px;
-    text-align: left;
-    position: relative;
-    width: 60%;
-    height: auto;
-}
-
-.pass-btn {
-    color: black;
-    border-radius: 3px;
-    background-color: orange;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}ß

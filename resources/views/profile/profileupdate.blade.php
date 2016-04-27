@@ -15,6 +15,7 @@
             <div class='fancyboxsilver row'>
                 <div class='col-md-4 profile_image'>
                     <img id='profile-image' src='{{ $user->profile_image }}'><br />
+                    <button class='profileimage-btn' onclick="">Upload Image</button>
                     <h2> {{ $user->username }} </h2>
                 </div>
                 <div class='col-md-6 profile_info'>
@@ -30,8 +31,7 @@
                     Email: {{ $user->email }} <br />
                     <br />
                     Location: {{ $user->location }} <br /><br /><br /><br />
-                    <button class='info-btn' onclick="window.location.href='/profileupdate'">Change Profile Info</button>
-                    <button class='pass-btn'>Change Password</button>
+                    <button class='info-btn' onclick="window.location.href='/profile'">Save Changes</button>
                 </div>
             </div>
         </div>
