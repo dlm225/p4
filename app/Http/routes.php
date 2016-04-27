@@ -19,6 +19,7 @@ Route::get('/leaderboard', 'MoreController@getLeaderboard');
 
 Route::get('/profile', 'ProfileController@getProfile');
 Route::get('/profileupdate', 'ProfileController@getProfileUpdate');
+Route::post('/profileupdate', 'ProfileController@postProfileUpdate');
 
 
 

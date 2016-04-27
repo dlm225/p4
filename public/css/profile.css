@@ -16,7 +16,7 @@
     height: auto;
 }
 
-.pass-btn {
+.pass-btn, .change-btn {
     color: black;
     border-radius: 3px;
     background-color: orange;
@@ -38,4 +38,13 @@
     color: black;
     border-radius: 1px;
     background-color: gray;
+}
+
+button {
+    color: black;
+    border-radius: 3px;
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
