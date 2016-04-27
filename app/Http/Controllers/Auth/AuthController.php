@@ -25,7 +25,7 @@ class AuthController extends Controller
 
 
     # Overrides Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers
-    protected $username = 'username';
+    # protected $username = 'username';
 
     # Where should the user be redirected to if their login fails?
     protected $loginPath = '/login';
