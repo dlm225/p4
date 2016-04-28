@@ -20,11 +20,13 @@
                         'class' => 'form',
                         'files' => true)) !!}
 
-                    <div class='col-md-4 profile_image'>
+                    <div class='col-md-4 profile_image_area'>
                         <img id='profile-image' src='{{ $user->profile_image }}'><br />
-                        {!! Form::file('image'); !!}
-
-                        <h2> {{ $user->username }} {!! Form::text('username', 'Change username here'); !!} </h2>
+                        {!! Form::checkbox('resetimage', 'resetimage') !!} Reset Image to Default
+                        <br />OR
+                        {!! Form::file('newimage'); !!}<br />
+                        Username: {!! Form::text('username', $user->username); !!}
+                        <div class='error'>{{ $errors->first('username') }}</div>
                     </div>
                     <div class='col-md-6 profile_info'>
                         Date Joined: {{ $user->created_at->format('m/d/Y') }} <br />
@@ -36,10 +38,12 @@
                             Last Points Earned: {{ $user->last_points->format('m/d/Y') }}<br />
                         @endif
                         <br />
-                        Email: {{ $user->email }} {!! Form::text('email', 'Change email here'); !!} <br />
+                        Email: {!! Form::text('email', $user->email ); !!} <br />
+                        <div class='error'>{{ $errors->first('email') }}</div>
                         <br />
-                        Location: {{ $user->location }} {!! Form::text('location', 'Change location here'); !!} <br /><br /><br /><br />
-                        {!! Form::button('Save Changes'); !!}
+                        Location: {!! Form::text('location', $user->location); !!} <br /><br /><br /><br />
+                        <button class="info-btn" onclick="location.href='/profile'">Cancel</button>
+                        {!! Form::submit('Save Changes'); !!}
                     </div>
 
                 {!! Form::close() !!}

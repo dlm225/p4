@@ -13,7 +13,7 @@
     @section('content')
         <div class='container'>
             <div class='fancyboxsilver row'>
-                <div class='col-md-4 profile_image'>
+                <div class='col-md-4 profile_image_area'>
                     <img id='profile-image' src='{{ $user->profile_image }}'><br />
                     <h2> {{ $user->username }} </h2>
                 </div>

@@ -4,6 +4,7 @@ namespace p4\Http\Controllers;
 
 use Auth;
 use p4\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller {
 
@@ -22,26 +23,29 @@ class ProfileController extends Controller {
     }
 
     public function postProfileUpdate(Request $request) {
-        $book = \App\Book::find($request->id);
-
-        $book->title = $request->title;
-        $book->author_id = $request->author_id;
-        $book->published = $request->published;
-        $book->cover = $request->cover;
-        $book->purchase_link = $request->purchase_link;
-        if($request->tags) {
-            $tags = $request->tags;
-        }
-        else {
-            $tags = [];
-        }
-        $book->tags()->sync($tags);
-        $book->save();
-
-        \Session::flash('message','Your changes were made.');
-        return redirect('/book/edit/'.$request->id);
-    }
-
         $user = Auth::user();
-        return view('profile.profileupdate')->with('user',$user);
+
+        $this->validate($request,[
+            'username' => 'required|min:3',
+            'email' => 'required|email',
+        ]);
+
+        $user->username = $request->username;
+        $user->email= $request->email;
+        $user->location = $request->location;
+        if($request->resetimage == 'resetimage') {
+            $user->profile_image = '/images/defaultprofile.png';
+        }
+        else if($request->file('newimage')) {
+            $imagename = $user->username.'.'.
+                $request->file('newimage')->getClientOriginalExtension();
+            $request->file('newimage')->move(
+                base_path().'/public/images/users/', $imagename
+            );
+            $user->profile_image = '/images/users/'.$imagename;
+        }
+        $user->save();
+
+        return redirect('/profile');
+    }
 }

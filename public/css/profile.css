@@ -1,10 +1,11 @@
 #profile-image {
-    padding: 5px;
+    padding: 20px;
     width: 200px;
     height: auto;
 }
 
-.profile_image {
+.profile_image_area {
+    width: 250px;
     text-align: center;
 }
 
@@ -30,7 +31,7 @@
     border-radius: 3px;
     background-color: orange;
     position: absolute;
-    right: 100;
+    left: 0;
     bottom: 0;
 }
 
@@ -40,11 +41,20 @@
     background-color: gray;
 }
 
-button {
+input[type=submit] {
     color: black;
     border-radius: 3px;
     background-color: orange;
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+input[type=text] {
+    font-size: 1em;
+}
+
+.defaultimage {
+    color: black;
+    border-radius: 10px;
 }
