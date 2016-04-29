@@ -14,7 +14,7 @@
             <br /><br />
             <span class="glyphicon glyphicon-flag whitetext" style="font-size:200px;" aria-hidden="true"></span>
             <h1 class="whitetext">Another CTF</h1>
-            <h4 class="whitetext">A Capture-the-Flag Training Venue</h4>
+            <h4 class="whitetext">A Crowdsourced Capture-the-Flag Training Venue</h4>
 
             @if(Auth::user())
                 <br /><br />
