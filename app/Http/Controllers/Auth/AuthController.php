@@ -4,6 +4,7 @@ namespace p4\Http\Controllers\Auth;
 
 use p4\User;
 use Validator;
+use Carbon\Carbon;
 use p4\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -77,7 +78,7 @@ class AuthController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'last_login' => '2016-04-29',
+            'last_login' => Carbon::now(),
         ]);
     }
 }

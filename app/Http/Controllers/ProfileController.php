@@ -48,4 +48,19 @@ class ProfileController extends Controller {
 
         return redirect('/profile');
     }
+
+    public function getPasswordUpdate() {
+        $user = Auth::user();
+        return view('profile.passwordupdate')->with('user',$user);
+    }
+
+    public function postPasswordUpdate(Request $request) {
+        $user = Auth::user();
+        $this->validate($request,[
+            'password' => 'required|min:6|confirmed',
+        ]);
+        $user->password = bcrypt($request['password']);
+        $user->save();
+        return redirect('/profile');
+    }
 }

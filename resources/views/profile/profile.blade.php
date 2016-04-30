@@ -31,7 +31,7 @@
                     <br />
                     Location: {{ $user->location }} <br /><br /><br /><br />
                     <button class='info-btn' onclick="window.location.href='/profileupdate'">Change Profile Info</button>
-                    <button class='pass-btn'>Change Password</button>
+                    <button class='pass-btn' onclick="window.location.href='/passwordupdate'">Change Password</button>
                 </div>
             </div>
         </div>
