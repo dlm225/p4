@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password', 'last_login',
+        'username', 'email', 'password', 'last_login', 'profile_image',
     ];
 
     /**
@@ -26,9 +26,9 @@ class User extends Authenticatable
 
     /**
      * Set the password to be hashed when saved
-     */
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = \Hash::make($password);
-    }
+     *
+    *public function setPasswordAttribute($password)
+    *{
+    *    $this->attributes['password'] = \Hash::make($password);
+    *}*/
 }

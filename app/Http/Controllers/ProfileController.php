@@ -59,7 +59,7 @@ class ProfileController extends Controller {
         $this->validate($request,[
             'password' => 'required|min:6|confirmed',
         ]);
-        $user->password = bcrypt($request['password']);
+        $user->password = \Hash::make('{{ $request->password }}');
         $user->save();
         return redirect('/profile');
     }
