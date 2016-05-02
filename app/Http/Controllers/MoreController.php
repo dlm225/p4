@@ -14,4 +14,8 @@ class MoreController extends Controller {
         return view('more.leaderboard')->with('leaders',$leaders);
     }
 
+    public function howToPlay() {
+        return view('more.howto');
+    }
+
 }

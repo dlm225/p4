@@ -51,7 +51,7 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="/leaderboard">Leaderboard</a></li>
                                             <li><a href="#">Another action</a></li>
-                                            <li><a href="#">How to Play</a></li>
+                                            <li><a href="/howto">How to Play</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#">Links to Study Sites</a></li>
                                         </ul>

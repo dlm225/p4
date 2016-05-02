@@ -16,6 +16,7 @@ Route::get('/home', 'HomeController@home');
 Route::get('/about', 'HomeController@about');
 
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
+Route::get('/howto', 'MoreController@howToPlay');
 
 Route::get('/profile', 'ProfileController@getProfile');
 Route::get('/profileupdate', 'ProfileController@getProfileUpdate');
