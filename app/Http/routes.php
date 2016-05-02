@@ -18,6 +18,10 @@ Route::get('/about', 'HomeController@about');
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
 Route::get('/howto', 'MoreController@howToPlay');
 
+Route::get('/gameboard', 'GameController@getGameboard');
+Route::get('/question', 'GameController@getQuestion');
+Route::post('/question', 'GameController@postAnswer');
+
 Route::get('/profile', 'ProfileController@getProfile');
 Route::get('/profileupdate', 'ProfileController@getProfileUpdate');
 Route::post('/profileupdate', 'ProfileController@postProfileUpdate');
