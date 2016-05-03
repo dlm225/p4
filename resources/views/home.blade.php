@@ -13,16 +13,14 @@
 
 <h3>Choose a topic to play...</h3>
 
-
-@foreach($categories as $category)
 <div class='container'>
-    <div class='row-centered'>
+    @foreach($categories as $category)
         <div class='col-xs-4 col-centered fancycategorybox'>
             {!! Form::open(array('url' => '/gameboard')) !!}
-                <a href='/gameboard?id={{ $category_id }}><div class='categorytext'> {{ $category }} </div></a>
+                <a href='/gameboard/{{ $category->id }} '><div class='categorytext'> {{ $category->category }} </div></a>
             {!! Form::close() !!}
         </div>
-    </div>
+    @endforeach
 </div>
-@endforeach
+
 @stop

@@ -11,24 +11,12 @@ class GameController extends Controller {
     * Responds to requests to GET /gameboard
     */
     public function getGameboard() {
-        $categories = \p4\Category::getAllCategories();
-        return view('game.gameboard')->with('categories',$categories);
+        $category = \p4\Category::find($id);
+        return view('game.gameboard')->with('category',$category);
     }
 
-    /**
-    * Responds to requests to GET /about
-    */
-    public function about() {
-        return view('about');
-    }
-
-    /**
-    * Responds to requests to GET /landingpage
-    */
-    public function home() {
-        $user = \Auth::user();
-        $user->last_login = Carbon::now();
-        $user->save();
-        return view('/home');
+    public function getGameboardCategory($id) {
+        $category = \p4\Category::find($id);
+        return view('game.gameboard')->with('category',$category);
     }
 }

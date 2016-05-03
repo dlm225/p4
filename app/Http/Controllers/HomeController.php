@@ -28,6 +28,8 @@ class HomeController extends Controller {
         $user = \Auth::user();
         $user->last_login = Carbon::now();
         $user->save();
-        return view('/home');
+
+        $categories = \p4\Category::getAllCategories();
+        return view('home')->with('categories',$categories);
     }
 }

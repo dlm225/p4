@@ -9,26 +9,19 @@
 @stop
 
 @section('content')
-<h1> Category: </h1>
+<h1> Category: {{ $category->category }}</h1>
 
 <h3>Choose a point value to play...</h3>
 
 <div class='container'>
-    <div class='row-centered'>
+    @foreach($questions as $question)
         <div class='col-xs-4 col-centered fancycategorybox'>
-            <div class='categorytext'>100</div>
+            {!! Form::open(array('url' => '/gameboard')) !!}
+                <a href='/question/{{ $question->id }} '><div class='categorytext'> {{ $question->difficulty }} * 50 </div></a>
+            {!! Form::close() !!}
         </div>
-
-        <div class='col-xs-4 col-centered fancycategorybox'>
-            <div class='categorytext'>200</div>
-        </div>
-
-        <div class='col-xs-4 col-centered fancycategorybox'>
-            <div class='categorytext'>300</div>
-        </div>
-        <div class='col-xs-4 col-centered fancycategorybox'>
-            <div class='categorytext'>400</div>
-        </div>
-    </div>
+    @endforeach
 </div>
+
+
 @stop
