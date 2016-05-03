@@ -6,7 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-    public static function getAllCategories() {
+
+    public function question() {
+        return $this->belongsTo('\p4\Question')->question();
+    }
+
+    public static function getAllQuestions() {
         return \p4\Question::orderBy('id','asc')->get();
+    }
+
+    public static function getCategoryQuestions($id) {
+        $questions = \DB::table('questions')->where('category_id','=',$id)->get();
+        return $questions;
     }
 }

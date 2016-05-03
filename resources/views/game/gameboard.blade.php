@@ -5,22 +5,40 @@
 @stop
 
 @section('head')
-    <link href="/css/gameboard.css" rel='stylesheet'>
+    <link href="/css/play.css" rel='stylesheet'>
 @stop
 
 @section('content')
 <h1> Category: {{ $category->category }}</h1>
 
-<h3>Choose a point value to play...</h3>
-
-<div class='container'>
-    @foreach($questions as $question)
-        <div class='col-xs-4 col-centered fancycategorybox'>
-            {!! Form::open(array('url' => '/gameboard')) !!}
-                <a href='/question/{{ $question->id }} '><div class='categorytext'> {{ $question->difficulty }} * 50 </div></a>
-            {!! Form::close() !!}
+@if($questions)
+    <h3>Choose a point value to play...</h3>
+    <div class='container'>
+        @foreach($questions as $question)
+            <div class='col-xs-4 col-centered fancycategoryboxsmall'>
+                <a href='/question/{{ $question->id }} '>
+                    <div class='categorytext'>
+                        {{ $question->difficulty*50 }}
+                    </div>
+                </a>
+            </div>
+        @endforeach
+    </div>
+@else
+    <div class='container'>
+        <div class='col-sm-7 col-centered'>
+            <h3 class='noquestion'>No questions for this category yet.</h3>
         </div>
-    @endforeach
+    </div>
+@endif
+<div class='container'>
+    <div class='col-sm-7 col-centered fancyboxback'>
+        <a href='/play '>
+            <div class='categorytext'>
+                Go Back To Categories
+            </div>
+        </a>
+    </div>
 </div>
 
 

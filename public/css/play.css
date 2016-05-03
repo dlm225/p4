@@ -1,3 +1,19 @@
+.fancyboxback {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding:2px;
+    background-color: blue;
+    margin: auto;
+    width: 250px;
+    text-align: center;
+}
+
+.fancyboxback:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+
 .fancycategorybox {
     border-radius: 5px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
@@ -13,6 +29,22 @@
    background: #28597a;
    color: #ccc;
    }
+
+.fancycategoryboxsmall {
+       border-radius: 5px;
+       box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+       padding:2px;
+       background-color: darkorange;
+       margin: auto;
+       width: 100px;
+       text-align: center;
+   }
+
+.fancycategoryboxsmall:hover {
+      border-top-color: #28597a;
+      background: #28597a;
+      color: #ccc;
+      }
 
 .row-centered {
     text-align:center;
@@ -46,4 +78,8 @@ a {
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+.noquestion {
+    color: yellow;
 }

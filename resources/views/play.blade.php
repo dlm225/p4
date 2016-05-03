@@ -16,9 +16,11 @@
 <div class='container'>
     @foreach($categories as $category)
         <div class='col-xs-4 col-centered fancycategorybox'>
-            {!! Form::open(array('url' => '/gameboard')) !!}
-                <a href='/gameboard/{{ $category->id }} '><div class='categorytext'> {{ $category->category }} </div></a>
-            {!! Form::close() !!}
+            <a href='/gameboard/{{ $category->id }} '>
+                <div class='categorytext'>
+                    {{ $category->category }}
+                </div>
+            </a>
         </div>
     @endforeach
 </div>

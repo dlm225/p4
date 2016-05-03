@@ -13,4 +13,5 @@ class Category extends Model
     public static function getAllCategories() {
         return \p4\Category::orderBy('id','asc')->get();
     }
+
 }

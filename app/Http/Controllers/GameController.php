@@ -7,16 +7,11 @@ use Carbon\Carbon;
 
 class GameController extends Controller {
 
-    /**
-    * Responds to requests to GET /gameboard
-    */
-    public function getGameboard() {
+    public function getGameboardByCategory($id) {
         $category = \p4\Category::find($id);
-        return view('game.gameboard')->with('category',$category);
-    }
-
-    public function getGameboardCategory($id) {
-        $category = \p4\Category::find($id);
-        return view('game.gameboard')->with('category',$category);
+        $questions = \p4\Question::getCategoryQuestions($id);
+        return view('game.gameboard')
+            ->with('questions',$questions)
+            ->with('category',$category);
     }
 }

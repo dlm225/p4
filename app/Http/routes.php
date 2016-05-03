@@ -18,8 +18,7 @@ Route::get('/about', 'HomeController@about');
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
 Route::get('/howto', 'MoreController@howToPlay');
 
-Route::get('/gameboard', 'GameController@getGameboard');
-Route::get('/gameboard/{id?}', 'GameController@getGameboardCategory');
+Route::get('/gameboard/{id?}', 'GameController@getGameboardByCategory');
 Route::get('/question', 'GameController@getQuestion');
 Route::post('/question', 'GameController@postAnswer');
 
