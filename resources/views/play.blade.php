@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('title')
-    Categories - Another CTF
+    Play - Another CTF
 @stop
 
 @section('head')
-    <link href="/css/home.css" rel='stylesheet'>
+    <link href="/css/play.css" rel='stylesheet'>
 @stop
 
 @section('content')

@@ -22,14 +22,14 @@ class HomeController extends Controller {
     }
 
     /**
-    * Responds to requests to GET /landingpage
+    * Responds to requests to GET /play
     */
-    public function home() {
+    public function play() {
         $user = \Auth::user();
         $user->last_login = Carbon::now();
         $user->save();
 
         $categories = \p4\Category::getAllCategories();
-        return view('home')->with('categories',$categories);
+        return view('play')->with('categories',$categories);
     }
 }
