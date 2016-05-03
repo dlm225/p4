@@ -19,4 +19,9 @@ class Question extends Model
         $questions = \DB::table('questions')->where('category_id','=',$id)->get();
         return $questions;
     }
+
+    public static function getQuestion($id) {
+        $question = \DB::table('questions')->where('id','=',$id)->get();
+        return $question;
+    }
 }

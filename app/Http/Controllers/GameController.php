@@ -14,4 +14,12 @@ class GameController extends Controller {
             ->with('questions',$questions)
             ->with('category',$category);
     }
+
+    public function getQuestion($id) {
+        $category = \p4\Category::find($id);
+        $question = \p4\Question::find($id);
+        return view('game.question')
+            ->with('category',$category)
+            ->with('question',$question);
+    }
 }

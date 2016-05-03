@@ -1,3 +1,12 @@
+.questionbox {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding:50px;
+    background-color: gray;
+    width: auto;
+    text-align: center;
+}
+
 .fancyboxback {
     border-radius: 5px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
@@ -30,7 +39,7 @@
    color: #ccc;
    }
 
-.fancycategoryboxsmall {
+.fancycategoryboxsmall, .hint {
        border-radius: 5px;
        box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
        padding:2px;
@@ -40,7 +49,7 @@
        text-align: center;
    }
 
-.fancycategoryboxsmall:hover {
+.fancycategoryboxsmall:hover, .hint:hover {
       border-top-color: #28597a;
       background: #28597a;
       color: #ccc;
