@@ -30,6 +30,16 @@
             <div class='hint'>Hint 2</div>
         </div>
     </div>
+    <div class='row'>
+        <div class='col-md-4 col-md-offset-4'>
+            {!! Form::open(
+                array(
+                    'action' => 'GameController@postFlag',
+                    'class' => 'form')) !!}
+            Flag: {!! Form::text('flag', $submission->flag ); !!}
+            {!! Form::submit('Submit Flag'); !!}
+            {!! Form::close() !!}
+        </div>
     </div>
 </div>
 <div class='container'>

@@ -20,7 +20,7 @@ Route::get('/howto', 'MoreController@howToPlay');
 
 Route::get('/gameboard/{id?}', 'GameController@getGameboardByCategory');
 Route::get('/question/{id?}', 'GameController@getQuestion');
-Route::post('/question', 'GameController@postAnswer');
+Route::post('/question/{id?}', 'GameController@postFlag');
 
 Route::get('/profile', 'ProfileController@getProfile');
 Route::get('/profileupdate', 'ProfileController@getProfileUpdate');
