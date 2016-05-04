@@ -4,6 +4,7 @@ namespace p4\Http\Controllers;
 
 use p4\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class GameController extends Controller {
 
@@ -21,5 +22,17 @@ class GameController extends Controller {
         return view('game.question')
             ->with('category',$category)
             ->with('question',$question);
+    }
+
+    public function postFlag(Request $request) {
+
+        $this->validate($request,[
+            'flag' => 'exists:questions,flag,id,'.$request->question
+        ]);
+
+        
+        echo $request->question;
+        echo $request->flag;
+        //return redirect('/play');
     }
 }

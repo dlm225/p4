@@ -50,10 +50,13 @@ input[type=submit] {
     position: absolute;
     right: 0;
     bottom: 0;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
 }
 
 input[type=text] {
     font-size: 1em;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    border-radius: 3px;
 }
 
 .defaultimage {
