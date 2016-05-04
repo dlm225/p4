@@ -21,6 +21,8 @@ Route::get('/howto', 'MoreController@howToPlay');
 Route::get('/gameboard/{id?}', 'GameController@getGameboardByCategory');
 Route::get('/question/{id?}', 'GameController@getQuestion');
 Route::post('/question/{id?}', 'GameController@postFlag');
+Route::get('/hint1/{id?}', 'GameController@setHint1Used');
+Route::get('/hint2/{id?}', 'GameController@setHint2Used');
 
 Route::get('/profile', 'ProfileController@getProfile');
 Route::get('/profileupdate', 'ProfileController@getProfileUpdate');

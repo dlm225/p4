@@ -29,8 +29,22 @@
 
     <div class='row row-centered'>
         <div class='col-md-4 col-md-offset-4'>
-            <button class='hint1-btn'>Hint 1</button>
-            <button class='hint2-btn'>Hint 2</button>
+            @if($submission)
+                @if($submission->hint1)
+                    <a href='/hint1/{{ $question->id }}' class='hint1-used'>Hint 1</a>
+                @else
+                    <a href='/hint1/{{ $question->id }}' class='hint1-btn'>Hint 1</a>
+                @endif
+
+                @if($submission->hint2)
+                    <a href='/hint2/{{ $question->id }}' class='hint2-used'>Hint 2</a>
+                @else
+                    <a href='/hint2/{{ $question->id }}' class='hint2-btn'>Hint 2</a>
+                @endif
+            @else
+                <a href='/hint1/{{ $question->id }}' class='hint1-btn'>Hint 1</a>
+                <a href='/hint2/{{ $question->id }}' class='hint2-btn'>Hint 2</a>
+            @endif
         </div>
     </div>
 

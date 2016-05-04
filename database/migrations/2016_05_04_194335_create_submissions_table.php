@@ -30,6 +30,7 @@ class CreateSubmissionsTable extends Migration
             $table->binary('hint1used');
             $table->binary('hint2used');
             $table->integer('points_awarded')->unsigned();
+        });
     }
 
     /**

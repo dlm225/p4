@@ -112,10 +112,30 @@ a {
     float: left;
 }
 
+.hint1-used {
+    color: black;
+    border-radius: 5px;
+    background-color: darkgray;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
 .hint2-btn {
     color: black;
     border-radius: 5px;
     background-color: orange;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding-left: 15px;
+    padding-right: 15px;
+    float: right;
+}
+
+.hint2-used {
+    color: black;
+    border-radius: 5px;
+    background-color: darkgray;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     padding-left: 15px;
     padding-right: 15px;
