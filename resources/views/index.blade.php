@@ -18,9 +18,9 @@
 
             @if(Auth::user())
                 <br /><br />
-                <a class="joinbutton" href="/home">GO TO YOUR HOMEPAGE</a>
+                <a class="joinbutton" href="/play">PLAY</a>
             @else
-            <a class="joinbutton" id="modal_trigger" href="#modal">REGISTER or LOGIN</a>
+            <a class="joinbutton" id="modal_trigger" href="#modal">ENTER</a>
 
             <div id="modal" class="popupContainer" style="display:none;">
         		<header class="popupHeader">

@@ -44,7 +44,9 @@ class GameController extends Controller {
         return $this->getQuestion($id);
     }
 
-    public function getCreate() {
-        return view('game.create');
+    public function getCreateQuestion() {
+        $categories_for_dropdown = \p4\Category::categoriesForDropdown();
+        return view('game.create')
+            ->with('categories_for_dropdown', $categories_for_dropdown);
     }
 }

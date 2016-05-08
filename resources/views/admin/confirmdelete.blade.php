@@ -30,6 +30,7 @@
             Email: {{ $user->email }} <br />
             <br />
             Location: {{ $user->location }} <br /><br /><br /><br />
+            <button class='info-btn' onclick="window.location.href='/administrateusers'">Go Back</button>
             <button class='userdel-btn' onclick="window.location.href='/deleteconfirmed/{{ $user->id }}'">Confirm Delete User</button>
         </div>
     </div>

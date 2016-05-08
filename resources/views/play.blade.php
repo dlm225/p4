@@ -10,6 +10,7 @@
 
 @section('content')
 <h1> {{Auth::user()->username}}'s Progress</h1>
+<h2> Points: {{Auth::user()->points}}</h2>
 
 <h3>Choose a topic to play...</h3>
 

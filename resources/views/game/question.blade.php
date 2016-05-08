@@ -19,13 +19,17 @@
         </div>
     </div>
 
-    <br />
-
     <div class='row row-centered'>
-        <div class='questionbox'> {{ $question->question }} </div>
+        <div class='questionbox'>
+            {{ $question->question }}
+        </div>
     </div>
 
-    <br />
+    <div class='row row-centered2'>
+        <div class='createdbybox'>
+            <span class='createdby'>This question uploaded by {{ $question->createdby }}</span>
+        </div>
+    </div>
 
     <div class='row row-centered'>
         <div class='col-md-4 col-md-offset-4'>

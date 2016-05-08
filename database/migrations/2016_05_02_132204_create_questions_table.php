@@ -30,7 +30,8 @@ class CreateQuestionsTable extends Migration
             $table->double('difficulty');
             $table->string('hint1');
             $table->string('hint2');
-
+            $table->integer('createdby')->unsigned();
+            $table->foreign('createdby')->references('id')->on('users');
         });
     }
 

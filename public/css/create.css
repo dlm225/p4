@@ -1,0 +1,15 @@
+input[type=text] {
+    min-width: 90%;
+    height: 80px;
+    font-size: 1em;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    border-radius: 3px;
+    white-space: normal;
+}
+
+select {
+    font-size: 1em;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    border-radius: 3px;
+    color: black;
+}
