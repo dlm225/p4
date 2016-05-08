@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 0;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jamal@harvard.edu']);
@@ -31,6 +32,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 0;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jack@harvard.edu']);
@@ -42,6 +44,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 12;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'james@harvard.edu']);
@@ -53,6 +56,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 120;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jorge@harvard.edu']);
@@ -64,6 +68,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 1231;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'john@harvard.edu']);
@@ -75,6 +80,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 12310;
+        $user->is_admin = true;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'joyce@harvard.edu']);
@@ -86,6 +92,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 12311;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jane@harvard.edu']);
@@ -97,6 +104,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 340;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jim@harvard.edu']);
@@ -108,6 +116,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 20;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jackie@harvard.edu']);
@@ -119,6 +128,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 220;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'bob@harvard.edu']);
@@ -130,6 +140,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 240;
+        $user->is_admin = false;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'dan@harvard.edu']);
@@ -141,6 +152,7 @@ class UsersTableSeeder extends Seeder
         $user->last_points = '';
         $user->last_login = '';
         $user->points = 2347;
+        $user->is_admin = false;
         $user->save();
     }
 }

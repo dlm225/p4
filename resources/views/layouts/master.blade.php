@@ -67,14 +67,26 @@
                                             <li><a href="/history">History</a></li>
                                         </ul>
                                     </li>
-                                    @if(Auth::user()->points > 200)
+                                    @if(Auth::user()->points > 5000)
                                         <li><a href="/create">Create New Question</a></li>
+                                    @endif
+                                    @if(Auth::user()->is_admin === 1)
+                                        <li class='admin dropdown'>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                Administrate Site
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class='dropdown-menu' role='menu'>
+                                                <li><a href='/administrateusers'>Userlist</a></li>
+                                                <li><a href='/administratequestions'>Questions</a><li>
+                                            </ul>
+                                        </li>
                                     @endif
                                 @endif
                                 </ul>
                                 <ul class="nav navbar-right">
                                     {{--<li><a href="/#modal" id="modal_trigger2">Log-In</a></li>--}}
-                                    @if(Auth::user())
+                                    @if(Auth::check())
                                         <li><a href="/logout">Logout</a></li>
                                     @else
                                         <li><a href="/login">Login</a></li>

@@ -16,7 +16,7 @@
 <div class='container'>
     @foreach($categories as $category)
         <div class='col-xs-4 col-centered fancycategorybox'>
-            <a href='/gameboard/{{ $category->id }} '>
+            <a href='/gameboard/{{ $category->id }}'>
                 <div class='categorytext'>
                     {{ $category->category }}
                 </div>

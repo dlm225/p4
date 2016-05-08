@@ -20,4 +20,8 @@
 <ul><h4>Trophy Icon</h4>
     <ul>FlashWOD -- https://www.flashwod.com/img/home-images/score-icon.png</ul>
 </ul>
+
+<ul><h4>Table CSS</h4>
+    <ul>Jake Rocheleau -- http://codepen.io/jakestuts/</ul>
+</ul>
 @stop

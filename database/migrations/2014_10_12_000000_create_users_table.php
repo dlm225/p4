@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('last_points');
             $table->date('last_login');
             $table->double('points', 9, 0);
+            $table->boolean('is_admin');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -57,6 +57,10 @@ footer {
     text-align: left;
 }
 
+.shadowrow {
+    
+}
+
 .joinbutton {
     display: inline-block;;
     min-width: 200px;
