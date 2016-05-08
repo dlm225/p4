@@ -6,9 +6,9 @@
 
 @section('head')
     <link href="/css/userlist.css" rel='stylesheet'>
-    <script>
-        $(function(){$('#keywords').tablesorter();});
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
 @stop
 
 @section('content')
@@ -63,5 +63,5 @@
         </div>
     </div>
 @endif
-
+    <script>$(function(){$('#keywords').tablesorter();});</script>
 @stop

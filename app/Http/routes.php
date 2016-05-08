@@ -35,6 +35,8 @@ Route::post('/create', 'GameController@postCreate');
 
 Route::get('/administrateusers', 'AdminController@getUserlist');
 Route::get('/administratequestions', 'AdminController@getQuestions');
+Route::get('/deleteuser/{id?}', 'AdminController@getDeleteUser');
+Route::get('/deleteconfirmed/{id?}', 'AdminController@getDeleteConfirmed');
 
 /*
 |-------------------------------------

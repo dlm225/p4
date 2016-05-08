@@ -9,7 +9,7 @@
 @stop
 
 
-@if(Auth::user())
+@if(Auth::check())
     @section('content')
         <div class='container'>
             <div class='fancyboxsilver row'>

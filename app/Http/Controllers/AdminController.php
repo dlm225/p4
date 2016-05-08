@@ -13,4 +13,18 @@ class AdminController extends Controller {
         return view('admin.users')
             ->with('userlist', $userlist);
     }
+
+    public function getDeleteUser($id) {
+        $user = \p4\User::find($id);
+        return view('admin.confirmdelete')
+            ->with('user', $user);
+    }
+
+    public function getDeleteConfirmed($id) {
+        $user = \p4\User::find($id);
+        $username = $user->username;
+        $user->delete();
+        return view('admin.deleteconfirmed')
+            ->with('username', $username);
+    }
 }
