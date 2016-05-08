@@ -56,7 +56,7 @@
                                             <li><a href="#">Links to Study Sites</a></li>
                                         </ul>
                                     </li>
-                                @if(Auth::user())
+                                @if(Auth::check())
                                     <li class="dropdown">
                                         <a href="#" class"dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false>">
                                             {{ Auth::user()->username }} -- Pts: {{ Auth::user()->points }}
@@ -67,6 +67,9 @@
                                             <li><a href="/history">History</a></li>
                                         </ul>
                                     </li>
+                                    @if(Auth::user()->points > 200)
+                                        <li><a href="/create">Create New Question</a></li>
+                                    @endif
                                 @endif
                                 </ul>
                                 <ul class="nav navbar-right">

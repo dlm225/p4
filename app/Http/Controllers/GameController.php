@@ -43,4 +43,8 @@ class GameController extends Controller {
         $submission = \p4\Submission::setHint1Used($id);
         return $this->getQuestion($id);
     }
+
+    public function getCreate() {
+        return view('game.create');
+    }
 }

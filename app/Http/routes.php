@@ -30,6 +30,9 @@ Route::post('/profileupdate', 'ProfileController@postProfileUpdate');
 Route::get('/passwordupdate', 'ProfileController@getPasswordUpdate');
 Route::post('/passwordupdate', 'ProfileController@postPasswordUpdate');
 
+Route::get('/create', 'GameController@getCreate');
+Route::post('/create', 'GameController@postCreate');
+
 /*
 |-------------------------------------
 | Authentication routes

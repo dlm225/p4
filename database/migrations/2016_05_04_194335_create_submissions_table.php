@@ -27,8 +27,8 @@ class CreateSubmissionsTable extends Migration
             $table->foreign('question_id')->references('id')->on('questions');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->binary('hint1used');
-            $table->binary('hint2used');
+            $table->boolean('hint1used');
+            $table->boolean('hint2used');
             $table->integer('points_awarded')->unsigned();
         });
     }
