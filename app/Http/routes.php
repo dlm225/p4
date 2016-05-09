@@ -32,6 +32,7 @@ Route::post('/passwordupdate', 'ProfileController@postPasswordUpdate');
 
 Route::get('/create', 'GameController@getCreateQuestion');
 Route::post('/create', 'GameController@postCreateQuestion');
+Route::get('/questionsubmitted', 'GameController@questionSubmitted');
 
 Route::get('/administrateusers', 'AdminController@getUserlist');
 Route::get('/administratequestions', 'AdminController@getQuestions');

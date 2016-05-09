@@ -19,8 +19,8 @@
                 'action' => 'GameController@postCreateQuestion',
                 'class' => 'form')) !!}
 
-        {!! Form::label('category', 'Category:') !!}
-        {!! Form::select('category', $categories_for_dropdown) !!}
+        {!! Form::label('category_id', 'Category:') !!}
+        {!! Form::select('category_id', $categories_for_dropdown) !!}
         <div class='error'>{{ $errors->first('category_id') }}</div>
         {!! Form::label('question', 'Question:   (It may contain HTML, but no scripts)') !!}
         {!! Form::textarea('question') !!}

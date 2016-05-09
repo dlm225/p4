@@ -13,15 +13,12 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-
             # Increments method will make a Primary, Auto-Incrementing field.
             # Most tables start off this way
             $table->increments('id');
-
             # This generates two columns: `created_at` and `updated_at` to
             # keep track of changes to a row
             $table->timestamps();
-
             # The rest of the fields...
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
@@ -32,9 +29,9 @@ class CreateQuestionsTable extends Migration
             $table->string('hint2');
             $table->integer('createdby')->unsigned();
             $table->foreign('createdby')->references('id')->on('users');
-        });
+            $table->boolean('approved');
+            });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -49,4 +49,32 @@ class GameController extends Controller {
         return view('game.create')
             ->with('categories_for_dropdown', $categories_for_dropdown);
     }
+
+    public function postCreateQuestion(Request $request) {
+        $messages = [
+            'not_in' => 'You have to choose a category.',
+        ];
+
+        $this->validate($request,[
+            'category_id' => 'not_in:0',
+            'question' => 'required|min:3',
+            'hint1' => 'required|min:3',
+            'hint2' => 'required|min:3',
+            'flag' => 'required|min:3|max:64',
+        ],$messages);
+
+        $data = $request->only('category_id','question','flag','difficulty','hint1','hint2');
+        $data['createdby'] = \Auth::id();
+        $data['approved'] = '0';
+
+        $question = \p4\Question::create($data);
+
+        $question->save();
+
+        return redirect('/questionsubmitted');
+    }
+
+    public function questionSubmitted() {
+        return view('game.submitted');
+    }
 }

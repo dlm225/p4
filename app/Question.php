@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
 
-    public function question() {
-        return $this->belongsTo('\p4\Question')->question();
+    protected $fillable = ['category_id','question','flag','difficulty','hint1','hint2','createdby','approved'];
+
+    public function user() {
+        return $this->belongsTo('\p4\User');
     }
 
     public static function getAllQuestions() {

@@ -21,7 +21,8 @@ class QuestionsTableSeeder extends Seeder
             'difficulty' => '1.00',
             'hint1' => 'It is encoded with Base64',
             'hint2' => 'Try using http:\/\/www.base64decode.org, paste the encoded text into the top portion, and click DECODE',
-            'createdby' => '1'
+            'createdby' => '1',
+            'approved' => '1',
         ]);
 
         $category_id = \p4\Category::where('category','=','Encoding')->pluck('id')->first();
@@ -34,7 +35,8 @@ class QuestionsTableSeeder extends Seeder
             'difficulty' => '1.5',
             'hint1' => 'It is encoded with Base64',
             'hint2' => 'Try using http:\/\/www.base64decode.org, paste the encoded text into the top portion, and click DECODE',
-            'createdby' => '1'
+            'createdby' => '1',
+            'approved' => '1',
         ]);
 
         $category_id = \p4\Category::where('category','=','Encryption')->pluck('id')->first();
@@ -47,7 +49,8 @@ class QuestionsTableSeeder extends Seeder
             'difficulty' => '1.00',
             'hint1' => 'Hail Caesar...',
             'hint2' => 'Research Caesar rotation cipher',
-            'createdby' => '1'
+            'createdby' => '1',
+            'approved' => '1',
         ]);
     }
 }
