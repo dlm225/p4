@@ -22,6 +22,9 @@
 
 </head>
 <body>
+    @if(Session::get('message') != null)
+       <div class='flash_message'>{{ Session::get('message') }}</div>
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-md-12">

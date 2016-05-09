@@ -10,10 +10,14 @@ class Question extends Model
     protected $fillable = ['category_id','question','flag','difficulty','hint1','hint2','createdby','approved'];
 
     public function user() {
-        return $this->belongsTo('\p4\User');
+        return $this->belongsTo('\p4\User', 'createdby');
     }
 
-    public static function getAllQuestions() {
+    public function category() {
+        return $this->belongsTo('\p4\Category');
+    }
+
+    public static function getAllQuestionsA() {
         return \p4\Question::orderBy('id','asc')->get();
     }
 
@@ -27,8 +31,8 @@ class Question extends Model
         return $question;
     }
 
-    public static function needValidated() {
-        $needvalidated = \DB::table('questions')->where('approved','=','0')->get();
-        return $needvalidated;
+    public static function getAllQuestions() {
+        $allquestions = \p4\Question::with('category', 'user')->get();
+        return $allquestions;
     }
 }

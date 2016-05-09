@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+
     public function category() {
-        return $this->belongsTo('\p4\Category')->category();
+        return $this->hasOne('\p4\Question');
     }
 
     public static function getAllCategories() {

@@ -28,9 +28,26 @@ class AdminController extends Controller {
             ->with('username', $username);
     }
 
-    public function getQuestions() {
-        $needvalidated = \p4\Question::needValidated();
+    public function getAllQuestions() {
+        $allquestions = \p4\Question::getAllQuestions();
         return view('admin.questions')
-            ->with('needvalidated', $needvalidated);
+            ->with('allquestions',$allquestions);
+    }
+
+    public function getDeleteQuestion($id) {
+        $question = \p4\Question::find($id);
+        $category = \p4\Category::find($id);
+        return view('admin.confirmquestiondelete')
+            ->with('category', $category)
+            ->with('question', $question);
+    }
+
+    public function getDeletedQuestionConfirmed($id) {
+        $question = \p4\Question::find($id);
+        $question->delete();
+        \Session::flash('message', 'Question #'.$id.' has been deleted.');
+        $allquestions = \p4\Question::get();
+        return view('admin.questions')
+            ->with('allquestions', $allquestions);
     }
 }

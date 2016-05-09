@@ -53,6 +53,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid black;
+    width:100%;
 }
 
 img { border: 0; max-width: 100%; }
@@ -62,13 +63,24 @@ tr:hover {
 }
 
 /** page structure **/
-#tablewrapper {
+#tablewrapperred {
   display: block;
   width: 100%;
-  background: #fff;
+  background: #FF6666;
   margin: 0 auto;
   padding: 10px 15px;
   -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+  border-radius: 5px;
+}
+
+#tablewrappergreen {
+  display: block;
+  width: 100%;
+  background: #66FF66;
+  margin: 0 auto;
+  padding: 10px 15px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+  border-radius: 5px;
 }
 
 #keywords {
@@ -102,21 +114,27 @@ tr:hover {
 #keywords tbody tr td {
   text-align: center;
   vertical-align: middle;
+  border: 1px solid black;
+  padding: 1px;
+
 }
 #keywords tbody tr td.lalign {
   text-align: left;
 }
 
 .question {
-    width: 200px;
+    max-width: 200px;
+    word-wrap: break-word;
 }
 
 .hint {
-    width: 200px;
+    max-width: 200px;
+    word-wrap: break-word;
 }
 
 .flag {
-    width: 200px;
+    max-width: 200px;
+    word-wrap: break-word;
 }
 
 .black {
