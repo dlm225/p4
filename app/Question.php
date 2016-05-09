@@ -26,4 +26,9 @@ class Question extends Model
         $question = \DB::table('questions')->where('id','=',$id)->get();
         return $question;
     }
+
+    public static function needValidated() {
+        $needvalidated = \DB::table('questions')->where('approved','=','0')->get();
+        return $needvalidated;
+    }
 }

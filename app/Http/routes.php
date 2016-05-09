@@ -14,7 +14,6 @@
 Route::get('/', 'HomeController@getIndex');
 Route::get('/play', 'HomeController@play');
 Route::get('/about', 'HomeController@about');
-
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
 Route::get('/howto', 'MoreController@howToPlay');
 

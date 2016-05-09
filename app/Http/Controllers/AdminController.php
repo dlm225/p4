@@ -27,4 +27,10 @@ class AdminController extends Controller {
         return view('admin.deleteconfirmed')
             ->with('username', $username);
     }
+
+    public function getQuestions() {
+        $needvalidated = \p4\Question::needValidated();
+        return view('admin.questions')
+            ->with('needvalidated', $needvalidated);
+    }
 }
