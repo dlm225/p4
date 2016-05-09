@@ -1,10 +1,13 @@
-input[type=text] {
-    min-width: 90%;
-    height: 80px;
+input[type=textarea] {
     font-size: 1em;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     border-radius: 3px;
-    white-space: normal;
+}
+
+input[type=text] {
+    font-size: 1em;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    border-radius: 3px;
 }
 
 select {
@@ -12,4 +15,22 @@ select {
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     border-radius: 3px;
     color: black;
+}
+
+.warningred {
+    color: darkred;
+}
+
+input[type=submit] {
+    color: black;
+    border-radius: 3px;
+    background-color: orange;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.info-btn {
+    color: black;
+    border-radius: 3px;
+    background-color: orange;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
 }

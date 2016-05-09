@@ -25,11 +25,16 @@ class HomeController extends Controller {
     * Responds to requests to GET /play
     */
     public function play() {
-        $user = \Auth::user();
-        $user->last_login = Carbon::now();
-        $user->save();
+        if(\Auth::check()){
+            $user = \Auth::user();
+            $user->last_login = Carbon::now();
+            $user->save();
 
-        $categories = \p4\Category::getAllCategories();
-        return view('play')->with('categories',$categories);
+            $categories = \p4\Category::getAllCategories();
+            return view('play')->with('categories',$categories);
+        }
+        else {
+            return view('index');
+        }
     }
 }
