@@ -87,4 +87,16 @@ class AdminController extends Controller {
         return view('admin.questions')
             ->with('allquestions',$allquestions);
     }
+
+    public function promoteUser($id) {
+        $user = \p4\User::find($id);
+        $user->is_admin = '1';
+        $user->save();
+
+        \Session::flash('message', 'Selected user has been promoted to Admin.');
+
+        $userlist = \Auth::user()->get();
+        return view('admin.users')
+            ->with('userlist', $userlist);
+    }
 }

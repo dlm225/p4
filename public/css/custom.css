@@ -153,9 +153,9 @@ Flash message
     text-align:center;
     padding:5px;
     position:fixed;
-    top:100;
+    top:0;
     left:0;
     background-color:yellow;
     font-weight:bold;
-    font-size: 2em;
+    font-size: 1.5em;
 }

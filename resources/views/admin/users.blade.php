@@ -25,6 +25,7 @@
                 <th><span>Points</span></th>
                 <th><span>Can Create?</span></th>
                 <th><span>Is Admin?</span></th>
+                <th><span>Make Admin</span></th>
                 <th><span>Delete User</span></th>
             </tr>
         </thead>
@@ -45,6 +46,11 @@
                 @else
                     <td>---</td>
                 @endif
+                <td>
+                    <a href="/promoteuser/{{ $user->id }}">
+                        <span class="fa fa-coffee black" aria-hidden="true"></span>
+                    </a>
+                </td>
                 <td>
                     <a href="/deleteuser/{{ $user->id }}">
                         <span class="glyphicon glyphicon-trash black" aria-hidden="true"></span>
