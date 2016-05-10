@@ -17,12 +17,18 @@ class Question extends Model
         return $this->belongsTo('\p4\Category');
     }
 
+    public function submission() {
+        return $this->hasMany('\p4\Submission');
+    }
+
     public static function getAllQuestionsA() {
         return \p4\Question::orderBy('id','asc')->get();
     }
 
     public static function getCategoryQuestions($id) {
-        $questions = \DB::table('questions')->where('category_id','=',$id)->get();
+        $questions = \DB::table('questions')
+            ->where('category_id','=',$id)
+            ->get();
         return $questions;
     }
 

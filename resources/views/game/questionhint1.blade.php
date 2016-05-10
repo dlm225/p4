@@ -36,7 +36,7 @@
     <div class='row row-centered'>
         <div class='col-md-4 col-md-offset-4'>
             @if($submission != NULL)
-                <span class='tries'>Your attempts made on this question: {{ $submission->tries }} </span>
+                <span class='tries'>Attempts made: {{ $submission->tries }}</span>
             @else
                 <a href='/question/{{ $question->id }}/hint1' class='hint1-btn'>Hint 1</a>
                 <br />
@@ -47,16 +47,12 @@
 
     <div class='row row-centered'>
         <div class='col-lg-4 col-centered'>
-            @if(Session::get('flag_msg') != null)
-               <div class='flag_message'>{{ Session::get('flag_msg') }}</div>
-            @endif
             <div class='error'>{{ $errors->first('flag') }}</div>
             {!! Form::open(
                 array(
                     'action' => 'GameController@postFlag',
                     'class' => 'form')) !!}
                 {!! Form::hidden('question',$question->id)  !!}
-                {!! Form::hidden('category',$category->id) !!}
                 Flag:{!! Form::text('flag'); !!}
                 {!! Form::submit('Submit Flag'); !!}
             {!! Form::close() !!}

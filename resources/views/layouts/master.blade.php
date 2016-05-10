@@ -101,6 +101,9 @@
                     @if(Session::get('message') != null)
                        <div class='flash_message'>{{ Session::get('message') }}</div>
                     @endif
+                    @if(Session::get('points_msg') != null)
+                       <div class='points_message'>{{ Session::get('points_msg') }}</div>
+                    @endif
                     {{-- Main page content will be yielded here --}}
                     @yield('content')
                 </section>

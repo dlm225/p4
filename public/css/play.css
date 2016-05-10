@@ -130,7 +130,7 @@ a {
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     padding-left: 15px;
     padding-right: 15px;
-    float: left;
+    text-align: center;
 }
 
 .hint1-used {
@@ -150,7 +150,7 @@ a {
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     padding-left: 15px;
     padding-right: 15px;
-    float: right;
+    float: left;
 }
 
 .hint2-used {
@@ -160,7 +160,7 @@ a {
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     padding-left: 15px;
     padding-right: 15px;
-    float: right;
+    float: left;
 }
 
 input[type=text] {
@@ -200,4 +200,9 @@ input[type=submit] {
     border-radius: 3px;
     background-color: orange;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.tries {
+    margin: auto;
+    padding: 10px;
 }

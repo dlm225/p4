@@ -22,7 +22,7 @@ class GameController extends Controller {
         $category = \p4\Category::find($id);
         $question = \p4\Question::find($id);
         $submission = \p4\Submission::getSubmission($id);
-        dump($submission);
+
         return view('game.question')
             ->with('category',$category)
             ->with('question',$question)
@@ -30,13 +30,42 @@ class GameController extends Controller {
     }
 
     public function postFlag(Request $request) {
+        $question = \p4\Question::find($request->question);
+        $submission = \p4\Submission::getSubmission($request->question);
+        $category = \p4\Category::find($request->category);
 
         $this->validate($request,[
-            'flag' => 'exists:questions,flag,id,'.$request->question
+            'flag' => 'required'
         ]);
-        echo $request->question;
-        echo $request->flag;
-        //return redirect('/play');
+
+        if(!$submission) {
+            $submission = new Submission;
+            $submission->question_id = $request->question;
+            $submission->user_id = \Auth::user()->id;
+            $submission->tries = 1;
+            $submission->save();
+        }
+        else {
+            $submission->question_id = $request->question;
+            $submission->user_id = \Auth::user()->id;
+            $submission->tries = $submission->tries + 1;
+            $submission->save();
+        }
+
+        if($request->flag != $question->flag) {
+            \Session::flash('flag_msg', 'Your submitted flag was incorrect.');
+            return redirect('/question/'.$question->id);
+        }
+        if($request->flag == $question->flag) {
+            $user = \Auth::user();
+            $award = $question->difficulty * 100;
+            $user->points = $user->points + $award;
+            $user->save();
+            $submission->points_awarded = $award;
+            $submission->save();
+            \Session::flash('points_msg', 'Correct! You scored '.$award.' points.');
+            return redirect('/gameboard/'.$question->category_id);
+        }
     }
 
     public function setHint1Used($id) {

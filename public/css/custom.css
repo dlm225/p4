@@ -159,3 +159,21 @@ Flash message
     font-weight:bold;
     font-size: 1.5em;
 }
+
+.flag_message {
+    width:400px;
+    text-align:center;
+    padding:5px;
+    font-weight:bold;
+    font-size: 1em;
+    color: red;
+}
+
+.points_message {
+    width:400px;
+    text-align:center;
+    padding:5px;
+    background-color:green;
+    font-weight:bold;
+    font-size: 1em;
+}

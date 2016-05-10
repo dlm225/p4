@@ -30,6 +30,7 @@ class CreateSubmissionsTable extends Migration
             $table->boolean('hint1used');
             $table->boolean('hint2used');
             $table->integer('points_awarded')->unsigned();
+            $table->integer('tries')->unsigned();
         });
     }
 
