@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-
+<button class='refresh-btn' onclick="window.location.href='/administratequestions'">Refresh</button>
 @if($allquestions)
     <h1 class="normal">Unvalidated Questions</h1>
     <div id="tablewrapperred">

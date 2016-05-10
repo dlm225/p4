@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-<h1>Confirm Question Deletion</h1>
+<h1>Confirm Question #{{$question->id}} Deletion</h1>
 
 <div class='container'>
     <div class='row row-centered fancyboxsilver'>

@@ -41,7 +41,7 @@ Route::get('/administratequestions', 'AdminController@getAllQuestions');
 Route::get('/deletequestion/{id?}', 'AdminController@getDeleteQuestion');
 Route::get('/deletequestionconfirmed/{id?}', 'AdminController@getDeletedQuestionConfirmed');
 Route::get('/editquestion/{id?}', 'AdminController@getEditQuestion');
-Route::post('/editquestion', 'AdminController@postEditQuestion');
+Route::post('/editquestion/{id?}', 'AdminController@postEditQuestion');
 
 
 

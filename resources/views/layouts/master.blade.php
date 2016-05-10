@@ -22,9 +22,7 @@
 
 </head>
 <body>
-    @if(Session::get('message') != null)
-       <div class='flash_message'>{{ Session::get('message') }}</div>
-    @endif
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -100,6 +98,9 @@
                     </nav>
                 </header>
                 <section>
+                    @if(Session::get('message') != null)
+                       <div class='flash_message'>{{ Session::get('message') }}</div>
+                    @endif
                     {{-- Main page content will be yielded here --}}
                     @yield('content')
                 </section>

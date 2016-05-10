@@ -140,3 +140,12 @@ tr:hover {
 .black {
     color: black;
 }
+
+.refresh-btn {
+    color: black;
+    border-radius: 3px;
+    background-color: white;
+    float: right;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    font-size: 1.5em;
+}
