@@ -17,8 +17,13 @@ class GameController extends Controller {
         $user->last_login = Carbon::now();
         $user->save();
 
+        $questionsByCatCount = \p4\Question::questionsByCategoryCount();
         $categories = \p4\Category::getAllCategories();
-        return view('game.play')->with('categories',$categories);
+        $stuff = \p4\Question::numOfQuestionsNotAnsweredPerCategory();
+
+        return view('game.play')
+            ->with('questionsByCatCount',$questionsByCatCount)
+            ->with('categories',$categories);
     }
 
     public function getGameboardByCategory($id) {

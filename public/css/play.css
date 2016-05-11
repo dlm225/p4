@@ -212,3 +212,8 @@ input[type=submit] {
     padding: 20px;
     color: yellow;
 }
+
+.numQuestions {
+    color: gray;
+    font-size: .6em;
+}

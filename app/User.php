@@ -8,8 +8,8 @@ class User extends Authenticatable
 {
     public function user() {
         return $this
-            ->hasOne('\p4\Question', 'createdby')
-            ->hasOne('\p4\Submission', 'user_id');
+            ->hasMany('\p4\Question', 'createdby')
+            ->hasMany('\p4\Submission', 'user_id');
     }
 
     /**

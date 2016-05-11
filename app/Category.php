@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-
-    public function category() {
-        return $this->hasOne('\p4\Question');
+    /** Get the questions for the category **/
+    public function questions() {
+        return $this->hasMany('\p4\Question');
     }
 
     public static function getAllCategories() {
-        return \p4\Category::orderBy('id','asc')->get();
+        $categories = \p4\Category::orderBy('id','asc')->get();
+
+        return $categories;
     }
 
     public static function categoriesForDropdown() {

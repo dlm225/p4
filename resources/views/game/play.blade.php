@@ -20,6 +20,11 @@
             <a href='/gameboard/{{ $category->id }}'>
                 <div class='categorytext'>
                     {{ $category->category }}
+                    @foreach($questionsByCatCount as $questionsByCat)
+                        @if($category->id == $questionsByCat->category_id)
+                            <span class="numQuestions">[ {{ $questionsByCat->total }} ]</span>
+                        @endif
+                    @endforeach
                 </div>
             </a>
         </div>
