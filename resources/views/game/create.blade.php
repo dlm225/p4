@@ -43,7 +43,7 @@
         <div class='error'>{{ $errors->first('difficulty') }}</div>
         <br />
 
-        {!! Form::submit('Save Changes') !!}
+        {!! Form::submit('Create') !!}
         {!! Form::close() !!}
         <br />
         <button class="info-btn" onclick="location.href='/play'">Cancel</button>

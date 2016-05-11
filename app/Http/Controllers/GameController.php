@@ -9,6 +9,18 @@ use p4\Submission;
 
 class GameController extends Controller {
 
+    /**
+    * Responds to requests to GET /play
+    */
+    public function play() {
+        $user = \Auth::user();
+        $user->last_login = Carbon::now();
+        $user->save();
+
+        $categories = \p4\Category::getAllCategories();
+        return view('game.play')->with('categories',$categories);
+    }
+
     public function getGameboardByCategory($id) {
         $category = \p4\Category::find($id);
         $questions = \p4\Question::getCategoryQuestions($id);
@@ -58,6 +70,7 @@ class GameController extends Controller {
         }
         if($request->flag == $question->flag) {
             $user = \Auth::user();
+            $user->last_points = Carbon::now();
             $award = $question->difficulty * 100;
             $user->points = $user->points + $award;
             $user->save();

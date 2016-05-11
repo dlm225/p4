@@ -206,3 +206,9 @@ input[type=submit] {
     margin: auto;
     padding: 10px;
 }
+
+.points {
+    margin: auto;
+    padding: 20px;
+    color: yellow;
+}

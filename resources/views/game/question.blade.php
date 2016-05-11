@@ -38,30 +38,33 @@
             @if($submission != NULL)
                 <span class='tries'>Your attempts made on this question: {{ $submission->tries }} </span>
             @else
-                <a href='/question/{{ $question->id }}/hint1' class='hint1-btn'>Hint 1</a>
-                <br />
                 <div class='tries'>You have not yet attempted this question.</div>
             @endif
         </div>
     </div>
 
     <div class='row row-centered'>
-        <div class='col-lg-4 col-centered'>
-            @if(Session::get('flag_msg') != null)
-               <div class='flag_message'>{{ Session::get('flag_msg') }}</div>
-            @endif
-            <div class='error'>{{ $errors->first('flag') }}</div>
-            {!! Form::open(
-                array(
-                    'action' => 'GameController@postFlag',
-                    'class' => 'form')) !!}
-                {!! Form::hidden('question',$question->id)  !!}
-                {!! Form::hidden('category',$category->id) !!}
-                Flag:{!! Form::text('flag'); !!}
-                {!! Form::submit('Submit Flag'); !!}
-            {!! Form::close() !!}
-        </div>
+        @if($submission != NULL && $submission->points_awarded > 0)
+            <span class='points'>You scored {{ $submission->points_awarded }} points on this question</span>
+        @else
+            <div class='col-lg-4 col-centered'>
+                @if(Session::get('flag_msg') != null)
+                   <div class='flag_message'>{{ Session::get('flag_msg') }}</div>
+                @endif
+                <div class='error'>{{ $errors->first('flag') }}</div>
+                {!! Form::open(
+                    array(
+                        'action' => 'GameController@postFlag',
+                        'class' => 'form')) !!}
+                    {!! Form::hidden('question',$question->id)  !!}
+                    {!! Form::hidden('category',$category->id) !!}
+                    Flag:{!! Form::text('flag'); !!}
+                    {!! Form::submit('Submit Flag'); !!}
+                {!! Form::close() !!}
+            </div>
+        @endif
     </div>
+
 </div>
 
 <div class='container'>
