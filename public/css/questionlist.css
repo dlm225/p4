@@ -149,3 +149,42 @@ tr:hover {
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     font-size: 1.5em;
 }
+
+#keywords2 {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#keywords2 thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+
+#keywords2 thead tr th {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+#keywords2 thead tr th span {
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords2 thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords2 tbody tr {
+  color: #555;
+}
+#keywords2 tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  padding: 1px;
+
+}
+#keywords2 tbody tr td.lalign {
+  text-align: left;
+}

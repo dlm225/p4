@@ -45,7 +45,7 @@
                                     <li class="active"><a href="/play">Play <span class="sr-only">(current)</span></a></li>
                                     <li><a href="/about">About</a></li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                             More
                                             <span class="caret"></span>
                                         </a>
@@ -58,7 +58,7 @@
                                     </li>
                                 @if(Auth::check())
                                     <li class="dropdown">
-                                        <a href="#" class"dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false>">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                             {{ Auth::user()->username }} -- Pts: {{ Auth::user()->points }}
                                             <span class="caret"></span>
                                         </a>

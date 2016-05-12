@@ -16,7 +16,7 @@
 @if($allquestions)
     <h1 class="normal">Unvalidated Questions</h1>
     <div id="tablewrapperred">
-        <table id="keywords" cellspacing="0" cellpadding="0">
+        <table id="keywords">
         <thead>
             <tr>
                 <th><span>ID</span></th>
@@ -61,7 +61,7 @@
     </div>
     <h1 class="normal">Validated Questions</h1>
     <div id="tablewrappergreen">
-        <table id="keywords" cellspacing="0" cellpadding="0">
+        <table id="keywords2">
         <thead>
             <tr>
                 <th><span>ID</span></th>

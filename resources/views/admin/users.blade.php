@@ -16,7 +16,7 @@
 
 @if($userlist)
     <div id="wrapper">
-        <table id="keywords" cellspacing="0" cellpadding="0">
+        <table id="keywords">
         <thead>
             <tr>
                 <th><span>User ID</span></th>

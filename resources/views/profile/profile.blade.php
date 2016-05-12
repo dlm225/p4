@@ -14,7 +14,7 @@
         <div class='container'>
             <div class='fancyboxsilver row'>
                 <div class='col-md-4 profile_image_area'>
-                    <img id='profile-image' src='{{ $user->profile_image }}'><br />
+                    <img id='profile-image' src='{{ $user->profile_image }}' alt='profile image'><br />
                     <h2> {{ $user->username }} </h2>
                 </div>
                 <div class='col-md-6 profile_info'>
