@@ -13,6 +13,7 @@
 Route::get('/', 'HomeController@getIndex');
 Route::get('/about', 'HomeController@about');
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
+Route::get('/study', 'MoreController@study');
 Route::get('/howto', 'MoreController@howToPlay');
 
 Route::group(['middleware' => 'auth'], function() {
@@ -28,6 +29,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/profileupdate', 'ProfileController@postProfileUpdate');
     Route::get('/passwordupdate', 'ProfileController@getPasswordUpdate');
     Route::post('/passwordupdate', 'ProfileController@postPasswordUpdate');
+    Route::get('/history', 'ProfileController@getHistory');
 
     Route::get('/create', 'GameController@getCreateQuestion');
     Route::post('/create', 'GameController@postCreateQuestion');

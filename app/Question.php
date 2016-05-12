@@ -29,8 +29,13 @@ class Question extends Model
     }
 
     public static function getCategoryQuestions($id) {
-        $questions = \DB::table('questions')
+        $userid = \Auth::id();
+        $questions = \p4\Question::with(['submissions' => function($query) {
+                $query->where('user_id','=',\Auth::id())->get();
+            }])
             ->where('category_id','=',$id)
+            ->where('approved','=','1')
+            ->where('createdby','<>',$userid)
             ->get();
         return $questions;
     }
@@ -47,6 +52,8 @@ class Question extends Model
 
     public static function questionsByCategoryCount() {
         $questionsByCatCount = \DB::table('questions')->select('category_id', \DB::raw('count(*) as total'))
+            ->where('approved','=','1')
+            ->where('createdby','<>',\Auth::id())
             ->groupBy('category_id')
             ->get();
         return $questionsByCatCount;

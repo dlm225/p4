@@ -18,4 +18,8 @@ class MoreController extends Controller {
         return view('more.howto');
     }
 
+    public function study() {
+        return view('more.study');
+    }
+
 }

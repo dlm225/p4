@@ -17,9 +17,7 @@
         @foreach($questions as $question)
             <div class='col-xs-4 col-centered fancycategoryboxsmall'>
                 <a href='/question/{{ $question->id }} '>
-                    <div class='categorytext'>
-                        {{ $question->difficulty*100 }}
-                    </div>
+                    <div class='categorytext'> {{ $question->difficulty*100 }} </div>
                 </a>
             </div>
         @endforeach

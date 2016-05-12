@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
         $user->profile_image = '/images/users/Jill.jpg';
         $user->last_points = '';
         $user->last_login = '';
-        $user->points = 0;
+        $user->points = 4950;
         $user->is_admin = false;
         $user->save();
 
@@ -31,8 +31,8 @@ class UsersTableSeeder extends Seeder
         $user->profile_image = '/images/users/Jamal.png';
         $user->last_points = '';
         $user->last_login = '';
-        $user->points = 0;
-        $user->is_admin = false;
+        $user->points = 5001;
+        $user->is_admin = true;
         $user->save();
 
         $user = \p4\User::firstOrCreate(['email' => 'jack@harvard.edu']);

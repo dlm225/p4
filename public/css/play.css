@@ -102,6 +102,13 @@
     font-size: 1.5em;
 }
 
+.categorytextgray {
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 1.5em;
+    background-color: gray;
+}
+
 a {
     color: white;
 }
