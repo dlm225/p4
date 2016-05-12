@@ -9,9 +9,17 @@ use Illuminate\Http\Request;
 class AdminController extends Controller {
 
     public function getUserlist() {
+        $is_admin = \Auth::user()->is_admin;
         $userlist = \Auth::user()->get();
-        return view('admin.users')
-            ->with('userlist', $userlist);
+
+        if($is_admin) {
+            return view('admin.users')
+                ->with('userlist', $userlist);
+        }
+        else {
+            \Session::flash('message','Only admins can access that page.');
+            return view('index');
+        }
     }
 
     public function getDeleteUser($id) {
@@ -29,9 +37,17 @@ class AdminController extends Controller {
     }
 
     public function getAllQuestions() {
+        $is_admin = \Auth::user()->is_admin;
         $allquestions = \p4\Question::getAllQuestions();
-        return view('admin.questions')
-            ->with('allquestions',$allquestions);
+
+        if($is_admin) {
+            return view('admin.questions')
+                ->with('allquestions',$allquestions);
+        }
+        else {
+            \Session::flash('message','Only admins can access that page.');
+            return view('index');
+        }
     }
 
     public function getDeleteQuestion($id) {
@@ -94,6 +110,18 @@ class AdminController extends Controller {
         $user->save();
 
         \Session::flash('message', 'Selected user has been promoted to Admin.');
+
+        $userlist = \Auth::user()->get();
+        return view('admin.users')
+            ->with('userlist', $userlist);
+    }
+
+    public function demoteUser($id) {
+        $user = \p4\User::find($id);
+        $user->is_admin = '0';
+        $user->save();
+
+        \Session::flash('message', 'Selected user has been demoted and is no longer an Admin.');
 
         $userlist = \Auth::user()->get();
         return view('admin.users')

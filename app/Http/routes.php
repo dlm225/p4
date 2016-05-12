@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/deleteuser/{id?}', 'AdminController@getDeleteUser');
     Route::get('/deleteconfirmed/{id?}', 'AdminController@getDeleteConfirmed');
     Route::get('/promoteuser/{id?}', 'AdminController@promoteUser');
+    Route::get('/demoteuser/{id?}', 'AdminController@demoteUser');
 
     Route::get('/administratequestions', 'AdminController@getAllQuestions');
     Route::get('/deletequestion/{id?}', 'AdminController@getDeleteQuestion');

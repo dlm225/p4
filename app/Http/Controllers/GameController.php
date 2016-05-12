@@ -91,9 +91,17 @@ class GameController extends Controller {
     }
 
     public function getCreateQuestion() {
+        $points = \Auth::user()->points;
         $categories_for_dropdown = \p4\Category::categoriesForDropdown();
-        return view('game.create')
-            ->with('categories_for_dropdown', $categories_for_dropdown);
+
+        if($points > 4999) {
+            return view('game.create')
+                ->with('categories_for_dropdown', $categories_for_dropdown);
+        }
+        else {
+            \Session::flash('message', 'You must have more than 4999 points to create new questions');
+            return view('index');
+        }
     }
 
     public function postCreateQuestion(Request $request) {

@@ -5,7 +5,11 @@ CSCI E-15 Project 4 - Another Capture-The-Flag
 <http://p4.fortmorgan.us>
 
 ## Description
-Developer's Best Friend is a simple content generation site comprised of two sections - the first provides the user the ability to create between 1 and 50 paragraphs of Lorem-Ipsum text, the second provides the user the ability to create between 1 and 50 complete fake personas.  Each persona is output to the screen with full name, date of birth, address, phone number, email address, place of work, and a social media profile image.  Content is easily extracted from the site through copy-paste to any application the user desires.
+A multi-level, Jeopardy board-style Capture-The-Flag game for multiple users.  Users select a top-level category f progress through the questions at will.  When the user clicks on their selected square (the higher the point value, the more difficult the question), they will be presented with a technical question or problem.  The user must answer the question or solve the problem to receive the “flag”, which they then input into the “flag” box, which in turn adds the correct number of points to their total score.
+
+Users who earn 5000 points have the ability to create questions.  New questions are not automatically added to the gameboard - a site admin must approve the question from the ‘question administration’ page.  Users are not able to answer (or even see) their own questions (to prevent any user from earning a bunch of points for questions they submitted).
+
+Admins also have access to the user administration page and can ‘promote’ any user to ADMIN from that page.
 
 ## Demo
 <http://www.screencast.com/>
