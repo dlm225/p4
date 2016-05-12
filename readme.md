@@ -15,10 +15,10 @@ Admins also have access to the user administration page and can ‘promote’ an
 <http://www.screencast.com/>
 
 ## Details for teaching team
-jill@harvard.edu / (supplied password)
-jamal@harvard.edu / (supplied password)
-bob@harvard.edu / password
-john@harvard.edu / password (Admin)
+* jill@harvard.edu / (supplied password)
+* jamal@harvard.edu / (supplied password)
+* bob@harvard.edu / password
+* john@harvard.edu / password (Admin)
 
 ## Outside code
 * Login & Registation Popup -- Bijay Pakhrin @ AndWeCode -- http://andwecode.com/create-popup-login-and-signup-form

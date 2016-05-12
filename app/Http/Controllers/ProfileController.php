@@ -28,6 +28,7 @@ class ProfileController extends Controller {
         $this->validate($request,[
             'username' => 'required|min:3',
             'email' => 'required|email',
+            'newimage' => 'mimes:jpeg,bmp,png'
         ]);
 
         $user->username = $request->username;
