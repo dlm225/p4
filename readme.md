@@ -12,7 +12,7 @@ Users who earn 5000 points have the ability to create questions.  New questions 
 Admins also have access to the user administration page and can ‘promote’ any user to ADMIN from that page.
 
 ## Demo
-<http://www.screencast.com/>
+<http://screencast.com/t/rNjHrOb16wW>
 
 ## Details for teaching team
 * jill@harvard.edu / (supplied password)

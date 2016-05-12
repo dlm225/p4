@@ -58,7 +58,7 @@ class QuestionsTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
             'category_id' => $category_id,
-            'question' => 'File type: 50 4B 03 04',
+            'question' => 'File type: 25 50 44 46',
             'flag' => 'pdf',
             'difficulty' => '1.00',
             'hint1' => 'File header....',
