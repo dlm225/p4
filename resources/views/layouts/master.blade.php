@@ -70,7 +70,7 @@
                                     @if(Auth::user()->points > 5000)
                                         <li><a href="/create">Create New Question</a></li>
                                     @endif
-                                    @if(Auth::user()->is_admin === 1)
+                                    @if(Auth::user()->is_admin == 1)
                                         <li class='admin dropdown'>
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                                 Administrate Site
@@ -85,7 +85,6 @@
                                 @endif
                                 </ul>
                                 <ul class="nav navbar-right">
-                                    {{--<li><a href="/#modal" id="modal_trigger2">Log-In</a></li>--}}
                                     @if(Auth::check())
                                         <li><a href="/logout">Logout</a></li>
                                     @else
