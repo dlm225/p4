@@ -12,7 +12,7 @@
     <div class='container leader-container'>
         <div class='row'>
             <div class='col-md-6 col-md-offset-3 centerbox'>
-                <img src='/images/trophy.png' width='75' height='75'>
+                <img src='/images/trophy.png' width='75' height='75' alt='Trophy'>
                 <span class='title-text'> Leaderboard </span>
                 <img src='/images/trophy.png' width='75' height='75' alt='Trophy'>
             </div>
