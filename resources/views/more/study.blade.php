@@ -46,7 +46,7 @@
                         <li>http://chrissanders.org/2006/06/packet-school-101-part-1/</li>
                         <li>http://www.howtogeek.com/104278/how-to-use-wireshark-to-capture-filter-and-inspect-packets/</li>
                     </ul>
-                </ul>
+
             </div>
         </div>
     </div>
