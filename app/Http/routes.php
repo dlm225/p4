@@ -1,22 +1,16 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+/* General routes - logged in or not   */
 Route::get('/', 'HomeController@getIndex');
 Route::get('/about', 'HomeController@about');
 Route::get('/leaderboard', 'MoreController@getLeaderboard');
 Route::get('/study', 'MoreController@study');
 Route::get('/howto', 'MoreController@howToPlay');
 
+/* General routes - user must be logged in - Auth middleware Route::group used  */
 Route::group(['middleware' => 'auth'], function() {
+
+    /* General game play - gameboard and questions   */
     Route::get('/play', 'GameController@play');
     Route::get('/gameboard/{id?}', 'GameController@getGameboardByCategory');
     Route::get('/question/{id?}', 'GameController@getQuestion');
@@ -24,6 +18,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/hint1/{id?}', 'GameController@setHint1Used');
     Route::get('/hint2/{id?}', 'GameController@setHint2Used');
 
+    /* Profile routes - including password change   */
     Route::get('/profile', 'ProfileController@getProfile');
     Route::get('/profileupdate', 'ProfileController@getProfileUpdate');
     Route::post('/profileupdate', 'ProfileController@postProfileUpdate');
@@ -31,15 +26,16 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/passwordupdate', 'ProfileController@postPasswordUpdate');
     Route::get('/history', 'ProfileController@getHistory');
 
+    /* Create new quesiton routes   */
     Route::get('/create', 'GameController@getCreateQuestion');
     Route::post('/create', 'GameController@postCreateQuestion');
     Route::get('/questionsubmitted', 'GameController@questionSubmitted');
 
+    /* Routes to administer users and questions   */
     Route::get('/administrateusers', 'AdminController@getUserlist');
     Route::get('/deleteuser/{id?}', 'AdminController@getDeleteUser');
     Route::get('/deleteconfirmed/{id?}', 'AdminController@getDeleteConfirmed');
     Route::get('/promoteuser/{id?}', 'AdminController@promoteUser');
-
 
     Route::get('/administratequestions', 'AdminController@getAllQuestions');
     Route::get('/deletequestion/{id?}', 'AdminController@getDeleteQuestion');

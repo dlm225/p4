@@ -10,7 +10,7 @@ class ProfileController extends Controller {
 
     /**
     * Responds to requests to GET /profile
-    * Used when player requests to view their own or another profile page
+    * Used when player requests to view their own profile page
     */
     public function getProfile() {
         $user = Auth::user();

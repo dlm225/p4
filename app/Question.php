@@ -28,6 +28,7 @@ class Question extends Model
         return \p4\Question::orderBy('id','asc')->get();
     }
 
+    /* Retrieve all questions for a specific category */
     public static function getCategoryQuestions($id) {
         $userid = \Auth::id();
         $questions = \p4\Question::with(['submissions' => function($query) {
@@ -50,6 +51,7 @@ class Question extends Model
         return $allquestions;
     }
 
+    /* Get all categories - with count of number of questions per category */
     public static function questionsByCategoryCount() {
         $questionsByCatCount = \DB::table('questions')->select('category_id', \DB::raw('count(*) as total'))
             ->where('approved','=','1')
@@ -62,26 +64,5 @@ class Question extends Model
     public static function getCategoryId($id) {
         $categoryid = \DB::table('questions')->select('category_id')->where('id','=',$id)->first();
         return $categoryid;
-    }
-
-    public static function numOfQuestionsNotAnsweredPerCategory() {
-        $stuff = \p4\Question::with('category','submissions')
-                ->where('')
-                ->get();
-        dump($stuff[0]->submissions[0]->points_awarded);
-
-//        $user = \Auth::user();
-//        $categories = \p4\Category::get();
-//        $questions = \p4\Questions::get();
-//        $submissions = \p4\Submission::where('user_id','=',$user->id)->get();
-//
-//        foreach($categories as $category) {
-//            foreach($questions as $question) {
-//
-//            }
-//        }
-//        $numNotAnswered = array('category_id','numNotAnswered');
-//        $numNotAnswered = array_add($numNotAnswered, '','');
-//        return $numNotAnswered;
     }
 }

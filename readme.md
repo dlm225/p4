@@ -1,27 +1,23 @@
-# Laravel PHP Framework
+# p4
+CSCI E-15 Project 4 - Another Capture-The-Flag
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p4.fortmorgan.us>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+Developer's Best Friend is a simple content generation site comprised of two sections - the first provides the user the ability to create between 1 and 50 paragraphs of Lorem-Ipsum text, the second provides the user the ability to create between 1 and 50 complete fake personas.  Each persona is output to the screen with full name, date of birth, address, phone number, email address, place of work, and a social media profile image.  Content is easily extracted from the site through copy-paste to any application the user desires.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Demo
+<http://www.screencast.com/>
 
-## Official Documentation
+## Details for teaching team
+jill@harvard.edu / (supplied password)
+jamal@harvard.edu / (supplied password)
+bob@harvard.edu / password
+john@harvard.edu / password (Admin)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Outside code
+* Login & Registation Popup -- Bijay Pakhrin @ AndWeCode -- http://andwecode.com/create-popup-login-and-signup-form
+* Trophy Icon -- FlashWOD -- https://www.flashwod.com/img/home-images/score-icon.png
+* Tablesorter -- Christian Bach -- http://tablesorter.com/docs/ (MIT Open License)
+* Table CSS -- Jake Rocheleau -- http://codepen.io/jakestuts/

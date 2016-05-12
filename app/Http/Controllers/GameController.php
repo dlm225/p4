@@ -19,7 +19,6 @@ class GameController extends Controller {
 
         $questionsByCatCount = \p4\Question::questionsByCategoryCount();
         $categories = \p4\Category::getAllCategories();
-        //$stuff = \p4\Question::numOfQuestionsNotAnsweredPerCategory();
 
         return view('game.play')
             ->with('questionsByCatCount',$questionsByCatCount)

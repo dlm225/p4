@@ -52,5 +52,47 @@ class QuestionsTableSeeder extends Seeder
             'createdby' => '1',
             'approved' => '1',
         ]);
+
+        $category_id = \p4\Category::where('category','=','File Forensics')->pluck('id')->first();
+        DB::table('questions')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'category_id' => $category_id,
+            'question' => 'File type: 50 4B 03 04',
+            'flag' => 'pdf',
+            'difficulty' => '1.00',
+            'hint1' => 'File header....',
+            'hint2' => 'Research file headers at www.garykessler.net',
+            'createdby' => '6',
+            'approved' => '1',
+        ]);
+
+        $category_id = \p4\Category::where('category','=','File Forensics')->pluck('id')->first();
+            DB::table('questions')->insert([
+                'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+                'category_id' => $category_id,
+                'question' => '89 50 4E 47 0D 0A 1A 0A',
+                'flag' => 'png',
+                'difficulty' => '2.00',
+                'hint1' => 'File header....',
+                'hint2' => 'Research file headers at www.garykessler.net',
+                'createdby' => '2',
+                'approved' => '1',
+            ]);
+
+        $category_id = \p4\Category::where('category','=','Encoding')->pluck('id')->first();
+            DB::table('questions')->insert([
+                'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+                'category_id' => $category_id,
+                'question' => 'MJWGC2DCNRQWQYTMMFUA====',
+                'flag' => 'blahblahblah',
+                'difficulty' => '2.00',
+                'hint1' => 'BaseX encoded?',
+                'hint2' => 'Having 4 "=" at the end is significant...',
+                'createdby' => '2',
+                'approved' => '1',
+            ]);
     }
 }

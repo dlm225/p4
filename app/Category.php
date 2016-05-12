@@ -11,14 +11,14 @@ class Category extends Model
         return $this->hasMany('\p4\Question');
     }
 
+    /* Retrieve all categories for the gameboard    */
     public static function getAllCategories() {
         $categories = \p4\Category::orderBy('id','asc')->get();
-
         return $categories;
     }
 
+    /* Build array for category's dropdown  */
     public static function categoriesForDropdown() {
-        # Build array for category's dropdown
         $categories = \p4\Category::orderBy('id','asc')->get();
         $categories_for_dropdown = [];
         $categories_for_dropdown[0] = 'Choose a category...';
