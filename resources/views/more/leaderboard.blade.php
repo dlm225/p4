@@ -12,15 +12,15 @@
     <div class='container leader-container'>
         <div class='row'>
             <div class='col-md-6 col-md-offset-3 centerbox'>
-                <img src='/images/trophy.png' width='75px' height='75px'>
+                <img src='/images/trophy.png' width='75' height='75'>
                 <span class='title-text'> Leaderboard </span>
-                <img src='/images/trophy.png' width='75px' height='75px'>
+                <img src='/images/trophy.png' width='75' height='75' alt='Trophy'>
             </div>
         </div>
         @foreach($leaders as $leader)
             <div class='row'>
                 <div class='col-md-8 col-md-offset-2 shadowbox'>
-                    <img class='leader-profile_image' src=' {{ $leader->profile_image }} ' width='50px' height='50px'>
+                    <img class='leader-profile_image' src=' {{ $leader->profile_image }} ' width='50' height='50' alt='profile image'>
                     <span class='leader-username'> {{ $leader->username }} </span>
                     <span class='leader-points'> {{ $leader->points }} </span>
                     <span class='leader-last_login'> Last Login: {{ $leader->last_login }} </span>

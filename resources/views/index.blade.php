@@ -31,7 +31,8 @@
 
             		<section class="popupBody">
             			<!-- Social Login -->
-            			<div class="social_login">
+                        <h2>Social Login</h2>
+                        <div class="social_login">
             				<div class="">
             					<a href="#" class="social_box fb">
             						<span class="icon"><i class="fa fa-facebook"></i></span>
@@ -100,7 +101,7 @@
 
             					<div class="action_btns">
             						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-            						<div class="one_half last"><input type="submit" class="btn btn_red">Register</input></div>
+            						<div class="one_half last"><input type="submit" class="btn btn_red">Register</div>
             					</div>
             				</form>
             			</div>

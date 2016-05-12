@@ -13,18 +13,15 @@
 
 <h3>Credits</h3>
 
-<ul><h4>Login & Registation Popup</h4>
+<h4>Login & Registation Popup</h4>
     <ul>Bijay Pakhrin @ AndWeCode -- http://andwecode.com/create-popup-login-and-signup-form</ul>
-</ul>
 
-<ul><h4>Trophy Icon</h4>
+<h4>Trophy Icon</h4>
     <ul>FlashWOD -- https://www.flashwod.com/img/home-images/score-icon.png</ul>
-</ul>
-<ul><h4>Tablesorter</h4>
-    <ul>Christian Bach -- http://tablesorter.com/docs/</ul>
-    <ul>MIT Open License</ul>
-</ul>
-<ul><h4>Table CSS</h4>
+
+<h4>Tablesorter</h4>
+    <ul>Christian Bach -- http://tablesorter.com/docs/ (MIT Open License)</ul>
+
+<h4>Table CSS</h4>
     <ul>Jake Rocheleau -- http://codepen.io/jakestuts/</ul>
-</ul>
 @stop
